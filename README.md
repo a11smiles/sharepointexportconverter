@@ -23,7 +23,7 @@ Create an Excel file listing the contents of the Manifest.xml.  By default, the 
 > .\BuildExport.ps1 -WriteExcel -ExcelPath 'C:\path_to_excel\Manifest.xslx'
 ```
 ##### Convert and Copy Files
-Convert and copy all of the files from the export based on the Manifest.xml.  By default, the resulting files will be written to the current directory.  However, you can specify an alternate path by uting the optional `OutputPath` parameter.  Additionally, if your .dat files are in a different directory than the current one, then use the `-ExportPath` parameter and specify and alternate path.
+Convert and copy all of the files from the export based on the Manifest.xml.  By default, the resulting files will be written to the current directory.  However, you can specify an alternate path by uting the optional `-OutputPath` parameter.  Additionally, if your .dat files are in a different directory than the current one, then use the `-ExportPath` parameter and specify and alternate path.
 ```ps
 > .\BuildExport.ps1 -CopyFiles -OutputPath 'C:\path_copy_files_to\' -ExportPath 'C:\path_to_exported_dat_files\'
 ```
