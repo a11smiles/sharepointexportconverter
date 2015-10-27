@@ -7,25 +7,33 @@ When SharePoint exports a site collection, the resulting file, while having a .c
 ## Usage
 The export converter has a few options allowing you to either simply create a list of artifacts in an Excel file (NOTE: Excel must be installed for the COM libraries to be available) or actually converting the files from the export.
 
+
 **Default Usage**
+
 This assumes that the Manifest.xml along with the export files (*.dat) are in the current, working directory.
 ```ps
 > .\BuildExport.ps1 
 ```
 
+
 **Different Path for the Manifest.xml**
+
 In the case that your Manifest.xml is in a different location than the current directory.
 ```ps
 > .\BuildExport.ps1 -Manifest 'C:\path_to_manifest\Manifest.xml'
 ```
 
+
 **Write Excel File**
+
 Create an Excel file listing the contents of the Manifest.xml.  By default, the resulting Manifest.xlsx will be written to the current directory.  However, you can specify an alternate path by using the optional `-ExcelPath` parameter. 
 ```ps
 > .\BuildExport.ps1 -WriteExcel -ExcelPath 'C:\path_to_excel\Manifest.xslx'
 ```
 
+
 **Convert and Copy Files**
+
 Convert and copy all of the files from the export based on the Manifest.xml.  By default, the resulting files will be written to the current directory.  However, you can specify an alternate path by uting the optional `OutputPath` parameter.  Additionally, if your .dat files are in a different directory than the current one, then use the `-ExportPath` parameter and specify and alternate path.
 ```ps
 > .\BuildExport.ps1 -CopyFiles -OutputPath 'C:\path_copy_files_to\' -ExportPath 'C:\path_to_exported_dat_files\'
